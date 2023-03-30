@@ -1,9 +1,13 @@
 const DEFAULT_SIZE = 16;
+const DEFAULT_BG_COLOR = '#ffffff';
 const DEFAULT_GRID_BORDER = true;
+
 let currentSize = DEFAULT_SIZE;
+let current_bg_color = DEFAULT_BG_COLOR;
 let current_grid_border = DEFAULT_GRID_BORDER;
 
 const grid = document.querySelector('.grid');
+const bgColorPicker = document.querySelector('.bgColorPicker');
 const toggleBtn = document.getElementById('toggleBtn');
 const sliderLabel = document.getElementById('sliderLabel');
 const sliderInput = document.getElementById('slider');
@@ -19,6 +23,10 @@ const toggleGrid = (current_grid_border) => {
   }
 };
 
+const bgColorUpdate = () => {
+  grid.style.backgroundColor = current_bg_color;
+};
+
 // This function loads the grid with a specific size
 // Could be with the default size of the grid (when the page is loaded) or with input from the user using the slider input
 const loadGrid = (size) => {
@@ -30,7 +38,13 @@ const loadGrid = (size) => {
     grid.appendChild(gridElement);
   }
   toggleGrid(current_grid_border);
+  bgColorUpdate();
 };
+
+bgColorPicker.addEventListener('input', (e) => {
+  current_bg_color = e.target.value
+  bgColorUpdate();
+});
 
 // It adds border to each element of the grid when clicked on
 toggleBtn.addEventListener('click', () => {
