@@ -26,14 +26,21 @@
   <main>
     <!-- Settings -->
     <section class="settings-section">
-      <label for="">Grid Background Color</label>
-      <input type="color" class="bgColorPicker" value="#ffffff">
-      <p>Color picker for pen/pencil</p>
-      <p>Pen mode</p>
-      <p>Pencil mode</p>
-      <p>Rainbow mode</p>
-      <p>Eraser</p>
-      <p>Clear grid</p>
+      <!-- Color settings -->
+      <label for="bgColorPicker">Grid Background Color</label>
+      <input type="color" class="bgColorPicker" id="bgColorPicker" value="#ffffff">
+      <label for="penColorPicker">Pen/Pencil Color</label>
+      <input type="color" class="penColorPicker" id="penColorPicker" value="#333333">
+
+      <!-- Modes -->
+      <p>Modes:</p>
+      <button class="penBtn">Pen</button>
+      <button class="pencilBtn">Pencil</button>
+      <button class="rainbowBtn">Rainbow</button>
+      <button class="eraserBtn">Eraser</button>
+
+      <!-- Some other buttons -->
+      <button class="clearBtn">Clear grid</button>
       <button id="toggleBtn">Toggle grid</button>
       <label for="slider" id="sliderLabel">16 x 16</label>
       <input type="range" id="slider" name="slider" min="1" max="100" value="16">
