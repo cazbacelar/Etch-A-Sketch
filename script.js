@@ -1,9 +1,23 @@
 const DEFAULT_SIZE = 16;
+const DEFAULT_GRID_BORDER = true;
 let currentSize = DEFAULT_SIZE;
+let current_grid_border = DEFAULT_GRID_BORDER;
 
 const grid = document.querySelector('.grid');
+const toggleBtn = document.getElementById('toggleBtn');
 const sliderLabel = document.getElementById('sliderLabel');
 const sliderInput = document.getElementById('slider');
+
+const toggleGrid = (current_grid_border) => {
+  const gridElements = grid.childNodes;
+  for (const element of gridElements) {
+    if (current_grid_border === true) {
+      element.classList.add('grid-element-border');
+    } else {
+      element.classList.remove('grid-element-border');
+    }
+  }
+};
 
 // This function loads the grid with a specific size
 // Could be with the default size of the grid (when the page is loaded) or with input from the user using the slider input
@@ -13,10 +27,20 @@ const loadGrid = (size) => {
 
   for (let i = 0; i < (size * size); i++) {
     const gridElement = document.createElement('div');
-    gridElement.classList.add('grid-element-border')
     grid.appendChild(gridElement);
   }
+  toggleGrid(current_grid_border);
 };
+
+// It adds border to each element of the grid when clicked on
+toggleBtn.addEventListener('click', () => {
+  if (current_grid_border === true) {
+    current_grid_border = false;
+  } else {
+    current_grid_border = true;
+  }
+  toggleGrid(current_grid_border);
+});
 
 // It updates the slider label to match the input number
 const updateSliderLabel = (value) => {
