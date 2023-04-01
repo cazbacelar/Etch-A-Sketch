@@ -3,8 +3,8 @@
   --black: #292929;
   --grey: #858383;
   --pink: #ffe7e7;
-  --yellow: #fff3b6;
-  --blue: #5ca0d8;
+  --yellow: #fbedaa;
+  --blue: #4d97d3;
   --aquamarine: #00FFD4;
   --crayola: #FF5C69;
 }
@@ -48,11 +48,15 @@ html {
   border: 1px solid var(--black);
 }
 
+.grid-section {
+  order: 2;
+}
+
 /* HEADER */
 
 .header {
   text-align: center;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .title {
@@ -66,18 +70,24 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 50px;
 }
 
-/* SETTINGS */
+.left {
+  order: 1;
+}
+
+.right {
+  order: 3;
+}
 
 .settings-section {
-  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 170px;
 }
 
 button,
@@ -170,8 +180,11 @@ input[type='range']::-webkit-slider-thumb:hover {
 }
 
 #sliderLabel {
-  font-size: 20px;
   margin-bottom: -8px;
+}
+
+.colorLabel {
+  margin-bottom: -10px;
 }
 
 /* FOOTER */
@@ -214,3 +227,5 @@ a:visited {
 .fa-github:hover {
   transform: scale(1.1);
 }
+
+/* media queries */
