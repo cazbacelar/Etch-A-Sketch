@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/1a3d754de7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etch-A-Sketch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <script src="https://kit.fontawesome.com/1a3d754de7.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <div class="content-container">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="title">Etch-A-Sketch</h1>
+      </header>
 
-<body>
-  <!-- Header -->
-  <header class="header">
-    <h1 class="title">Etch-A-Sketch</h1>
-  </header>
+      <main class="main-container">
+        <!-- Settings -->
+        <section class="settings-section">
+          <button class="penBtn">Pen</button>
+          <button class="pencilBtn">Pencil</button>
+          <button class="rainbowBtn">Rainbow</button>
+          <button class="eraserBtn">Eraser</button>
 
-  <main class="main-container">
+          <button class="clearBtn">Clear</button>
+          <button id="toggleBtn">Toggle</button>
+          <label for="bgColorPicker" class="colorLabel">Grid</label>
+          <input
+            type="color"
+            class="bgColorPicker"
+            id="bgColorPicker"
+            value="#ffffff"
+          />
+          <label for="penColorPicker" class="colorLabel">Pen/Pencil</label>
+          <input
+            type="color"
+            class="penColorPicker"
+            id="penColorPicker"
+            value="#333333"
+          />
+          <label for="slider" id="sliderLabel">16 x 16</label>
+          <input
+            type="range"
+            id="slider"
+            name="slider"
+            min="1"
+            max="100"
+            value="16"
+          />
+        </section>
 
-    <!-- Grid -->
-    <section class="grid-section">
-      <div class="grid"></div>
-    </section>
+        <!-- Grid -->
+        <section class="grid-section">
+          <div class="grid"></div>
+        </section>
+      </main>
 
-    <!-- Settings -->
-    <section class="settings-section left">
-      <!-- Color settings -->
-      <label for="bgColorPicker" class="colorLabel">Grid</label>
-      <input type="color" class="bgColorPicker" id="bgColorPicker" value="#ffffff">
-      <label for="penColorPicker" class="colorLabel">Pen/Pencil</label>
-      <input type="color" class="penColorPicker" id="penColorPicker" value="#333333">
-    </section>
-
-    <section class="settings-section right">
-      <button class="penBtn">Pen</button>
-      <button class="pencilBtn">Pencil</button>
-      <button class="rainbowBtn">Rainbow</button>
-      <button class="eraserBtn">Eraser</button>
-
-      <button class="clearBtn">Clear grid</button>
-      <button id="toggleBtn">Toggle grid</button>
-      <label for="slider" id="sliderLabel">16 x 16</label>
-      <input type="range" id="slider" name="slider" min="1" max="100" value="16">
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p class="footerText">
-      Made by <a href="https://github.com/cazbacelar" title="github profile" target="_blank">Caz <i
-          class="fa-brands fa-github fa-lg"></i></a> | <a href="https://www.flaticon.com/free-icons/pencil"
-        title="pencil icons" target="_blank">Favicon created by
-        Freepik - Flaticon</a>
-    </p>
-  </footer>
-
-  <!-- Script tags -->
-  <script src="script.js"></script>
-</body>
-
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footerText">
+          Made by
+          <a
+            href="https://github.com/cazbacelar"
+            title="github profile"
+            target="_blank"
+            >Caz <i class="fa-brands fa-github fa-lg"></i
+          ></a>
+          |
+          <a
+            href="https://www.flaticon.com/free-icons/pencil"
+            title="pencil icons"
+            target="_blank"
+            >Favicon created by Freepik - Flaticon</a
+          >
+        </p>
+      </footer>
+    </div>
+    <!-- Script tags -->
+    <script src="script.js"></script>
+  </body>
 </html>
