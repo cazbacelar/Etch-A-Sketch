@@ -161,6 +161,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.05);
 }
 
+.active {
+  box-shadow: rgba(255, 92, 105, 0.9) 0px 1px 12px;
+  background-color: var(--crayola);
+  color: var(--white);
+  border: none;
+}
+
 /* footer */
 footer {
   padding: 10px 0;

@@ -121,18 +121,22 @@ penColorPicker.addEventListener("input", (e) => {
 
 penBtn.addEventListener("click", () => {
   currentMode = "pen";
+  setActive();
 });
 
 pencilBtn.addEventListener("click", () => {
   currentMode = "pencil";
+  setActive();
 });
 
 rainbowBtn.addEventListener("click", () => {
   currentMode = "rainbow";
+  setActive();
 });
 
 eraserBtn.addEventListener("click", () => {
   currentMode = "eraser";
+  setActive();
 });
 
 clearBtn.addEventListener("click", () => {
@@ -160,6 +164,14 @@ sliderInput.addEventListener("input", (e) => {
   loadGrid(currentSize);
   updateSliderLabel(currentSize);
 });
+
+const setActive = function () {
+  penBtn.classList.remove("active");
+  pencilBtn.classList.remove("active");
+  rainbowBtn.classList.remove("active");
+  eraserBtn.classList.remove("active");
+  document.querySelector(`.${currentMode}Btn`).classList.add("active");
+};
 
 window.onload = () => {
   loadGrid(DEFAULT_SIZE);
