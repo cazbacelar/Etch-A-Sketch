@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans&display=swap");
 
 :root {
-  --white: #fcfcfc;
+  --white: #fafafa;
   --black: #292929;
   --grey: #858383;
-  --pink: #ffe7e7;
-  --yellow: #fbedaa;
-  --blue: #4d97d3;
-  --aquamarine: #00ffd4;
   --crayola: #ff5c69;
 }
 
@@ -23,8 +19,8 @@ html {
 
 body {
   font-size: 18px;
-  background-color: var(--yellow);
-  color: var(--blue);
+  background-color: var(--white);
+  color: var(--crayola);
   font-family: "Poppins", sans-serif;
 }
 
@@ -89,8 +85,8 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: var(--yellow);
-  border: 1px solid var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--grey);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
 }
@@ -131,7 +127,7 @@ input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--yellow);
+  background-color: var(--white);
   opacity: 0.8;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
@@ -143,16 +139,16 @@ input[type="range"]:hover {
 
 input[type="range"]::-webkit-slider-runnable-track {
   height: 10px;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--crayola);
   border-radius: 5px;
-  background-color: var(--yellow);
+  background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: var(--blue);
+  background-color: var(--crayola);
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -174,7 +170,7 @@ footer {
 /* link style */
 a {
   text-decoration: none;
-  color: var(--blue);
+  color: var(--crayola);
 }
 
 a:hover,
